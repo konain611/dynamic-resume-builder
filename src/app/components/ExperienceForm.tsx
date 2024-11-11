@@ -1,6 +1,5 @@
 import React from "react";
 
-// Define the structure of each experience entry
 interface ExperienceEntry {
   company: string;
   position: string;
@@ -8,7 +7,6 @@ interface ExperienceEntry {
   description: string;
 }
 
-// Define the structure of the form data
 interface ExperienceFormProps {
   experience: ExperienceEntry[];
   handleExperienceChange: (index: number, event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
@@ -18,11 +16,13 @@ interface ExperienceFormProps {
 const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExperienceChange, handleAddExperience }) => {
   return (
     <div id="experience" className="form-group">
+      <br></br>
+      <br></br>
       <h3>Work Experience</h3>
       {experience.map((exp, index) => (
-        <div key={index} className="experience-entry">
-          <div>
-            <label htmlFor={`company-${index}`}>Company *</label>
+        <div key={index} className="form-group">
+        
+            htmlFor={`company-${index}`}
             <input
               type="text"
               id={`company-${index}`}
@@ -32,9 +32,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               placeholder="Enter company name"
               required
             />
-          </div>
-          <div>
-            <label htmlFor={`position-${index}`}>Position *</label>
+          htmlFor={`position-${index}`}
             <input
               type="text"
               id={`position-${index}`}
@@ -44,9 +42,8 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               placeholder="Enter your position"
               required
             />
-          </div>
-          <div>
-            <label htmlFor={`years-${index}`}>Years *</label>
+          
+            htmlFor={`years-${index}`}
             <input
               type="text"
               id={`years-${index}`}
@@ -56,9 +53,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               placeholder="Enter years of experience"
               required
             />
-          </div>
-          <div>
-            <label htmlFor={`description-${index}`}>Description</label>
+            htmlFor={`description-${index}`}
             <textarea
               id={`description-${index}`}
               name="description"
@@ -66,7 +61,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               onChange={(e) => handleExperienceChange(index, e)}
               placeholder="Describe your responsibilities and achievements"
             />
-          </div>
+          
         </div>
       ))}
       <button type="button" onClick={handleAddExperience} className="add-experience-btn">

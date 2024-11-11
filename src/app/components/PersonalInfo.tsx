@@ -1,6 +1,6 @@
 import React from "react";
 
-// Define the structure of the form data
+
 interface FormData {
   fname: string;
   lname: string;
@@ -11,7 +11,7 @@ interface FormData {
   about?: string; // Optional field
 }
 
-// Define the props for the PersonalInfo component
+
 interface PersonalInfoProps {
   formData: FormData;
   handleChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
@@ -20,8 +20,10 @@ interface PersonalInfoProps {
 const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) => {
   return (
     <div id="personal-info" className="form-group">
+      <br></br>
+      <br></br>
       <h3>Personal Information</h3>
-      <div>
+      
         <label htmlFor="fname">First Name *</label>
         <input
           type="text"
@@ -32,8 +34,8 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
           placeholder="Enter your first name"
           required
         />
-      </div>
-      <div>
+      
+      
         <label htmlFor="lname">Last Name *</label>
         <input
           type="text"
@@ -44,8 +46,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
           placeholder="Enter your last name"
           required
         />
-      </div>
-      <div>
+      
         <label htmlFor="email">Email *</label>
         <input
           type="email"
@@ -56,8 +57,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
           placeholder="Enter your email"
           required
         />
-      </div>
-      <div>
+      
         <label htmlFor="phone">Phone *</label>
         <input
           type="tel"
@@ -68,8 +68,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
           placeholder="Enter your phone number"
           required
         />
-      </div>
-      <div>
+      
         <label htmlFor="city">City *</label>
         <input
           type="text"
@@ -80,8 +79,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
           placeholder="Enter your city"
           required
         />
-      </div>
-      <div>
+      
         <label htmlFor="country">Country *</label>
         <input
           type="text"
@@ -92,8 +90,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
           placeholder="Enter your country"
           required
         />
-      </div>
-      <div>
+      
         <label htmlFor="about">About</label>
         <textarea
           id="about"
@@ -102,7 +99,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
           onChange={handleChange}
           placeholder="Write a short description about yourself"
         />
-      </div>
+      
     </div>
   );
 };

@@ -51,7 +51,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
               name="years"
               value={edu.years}
               onChange={(e) => handleEducationChange(index, e)}
-              placeholder="Years of Program"
+              placeholder="Years/Months of Program"
             />
         
             htmlFor={`field-${index}`}

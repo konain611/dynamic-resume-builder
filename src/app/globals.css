@@ -14,6 +14,9 @@ html {
 h3 {
   color: #000000;
 }
+hr{
+  color: #000000;
+}
 .skillTag {
   background-color: #000000;
   color: #fff;
@@ -147,7 +150,7 @@ background-color: #f5f5f5;
   font-size: 1rem;
   background-color: #ffffff;
   color: #30363d;
-  border: 1px solid #444c56;
+  border: 2px solid #444c56;
   border-radius: 5px;
   transition: border 0.3s ease;
   margin-bottom: 8px;
@@ -155,7 +158,7 @@ background-color: #f5f5f5;
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #226cc0;
+  border-color: #16569e;
   outline: none;
 }
 

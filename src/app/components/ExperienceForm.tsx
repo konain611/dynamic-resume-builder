@@ -29,7 +29,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               name="company"
               value={exp.company}
               onChange={(e) => handleExperienceChange(index, e)}
-              placeholder="Enter company name"
+              placeholder="Enter company name *"
               required
             />
           htmlFor={`position-${index}`}
@@ -39,7 +39,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               name="position"
               value={exp.position}
               onChange={(e) => handleExperienceChange(index, e)}
-              placeholder="Enter your position"
+              placeholder="Enter your position *"
               required
             />
           
@@ -50,7 +50,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               name="years"
               value={exp.years}
               onChange={(e) => handleExperienceChange(index, e)}
-              placeholder="Enter years of experience"
+              placeholder="Enter years/months of experience *"
               required
             />
             htmlFor={`description-${index}`}
@@ -61,7 +61,6 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               onChange={(e) => handleExperienceChange(index, e)}
               placeholder="Describe your responsibilities and achievements"
             />
-          
         </div>
       ))}
       <button type="button" onClick={handleAddExperience} className="add-experience-btn">

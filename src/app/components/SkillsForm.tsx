@@ -8,7 +8,7 @@ interface SkillsFormProps {
 
 const SkillsForm: React.FC<SkillsFormProps> = ({ skills, handleSkillSelect, handleSkillRemove }) => {
   return (
-    <div>
+    <div id="skills" className="form-group">
       <h3>Skills</h3>
       <input
         type="text"

@@ -81,18 +81,25 @@ hr {
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .navbar a {
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 100px;
+  padding: 10px 20px;
   display: inline-block;
+  text-align: center;
 }
 
 .navbar a:hover {
   background-color: #ffffff;
   color: #000000;
+}
+
+.navbar a:focus {
+  outline: none;
 }
 
 /* Container */
@@ -105,6 +112,8 @@ hr {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .title {
@@ -218,6 +227,7 @@ button:active,
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.15s ease;
+  width: 100%;
 }
 
 /* Generated CV Styles */
@@ -263,6 +273,7 @@ button:active,
   display: flex;
   margin-top: 30px;
   gap: 25px;
+  flex-direction: column;
 }
 
 .cv-left {
@@ -356,6 +367,39 @@ button:active,
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar a {
+    padding: 10px 20px;
+  }
+
+  /* Container */
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-top: 50px;
+  }
+
+  .form-group {
+    font-size: 1.2rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* CV content */
   .cv-content {
     flex-direction: column;
   }
@@ -365,8 +409,40 @@ button:active,
     width: 100%;
   }
 
-  .navbar a {
-    padding: 10px 50px;
+  /* Buttons */
+  .button-container {
+    margin-top: 10px;
+  }
+
+  .gen-cv-btn {
+    width: 100%;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group label {
+    font-size: 1.2rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .cv-left,
+  .cv-right {
+    padding: 15px;
+  }
+
+  .cv-left .section-title,
+  .cv-right .section-title {
+    font-size: 1.3rem;
+  }
+
+  .cv-content {
+    margin-top: 20px;
   }
 }
 
@@ -375,4 +451,3 @@ button:active,
     page-break-after: always;
   }
 }
-

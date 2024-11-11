@@ -89,7 +89,7 @@ export default function Home() {
             handleAddExperience={handleAddExperience}
           />
           <SkillsForm
-            skills={formData.skills}
+            formData={formData}
             handleSkillSelect={handleSkillSelect}
             handleSkillRemove={handleSkillRemove}
           />

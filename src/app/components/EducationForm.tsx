@@ -18,11 +18,10 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
     <div id="education" className="form-group">
       <br></br>
       <br></br>
-      <label>Education & Certifications</label>
+      <h3>Education & Certifications</h3>
       {education.map((edu, index) => (
         <div key={index} className="form-group">
-         
-             htmlFor={`institution-${index}`}
+           htmlFor={`institution-${index}`}
             <input
               type="text"
               id={`institution-${index}`}

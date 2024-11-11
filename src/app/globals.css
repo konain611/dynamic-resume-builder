@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #0d1117;
@@ -14,77 +15,62 @@ html {
 h3 {
   color: #000000;
 }
-hr{
+
+hr {
   color: #000000;
 }
 
-
+/* Skill Tags */
 .skillTag {
   background-color: #000000;
   color: #fff;
   padding: 5px 8px;
   border-radius: 5px;
   margin: 3px;
-  font-size: 0.4rem;
+  font-size: 1rem;
 }
+
 .selectedSkills {
   display: flex;
-  flex-wrap: wrap; /* Allows tags to wrap to the next line if needed */
-  gap: 8px; /* Adds spacing between tags */
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 10px;
 }
-
-
 
 .remove {
   margin-left: 8px;
   cursor: pointer;
-  color: #ff4d4f; /* Red color for the remove 'X' */
+  color: #ff4d4f;
   font-weight: bold;
 }
 
 .remove:hover {
-  color: #ff1a1a; /* Darker red on hover for the 'X' */
-}
-
-
-.remove {
-  margin-left: 8px;
-  cursor: pointer;
-  font-weight: bold;
+  color: #ff1a1a;
 }
 
 .suggestions {
-color: black;
-font-size: 15px;
-position: relative;
-border: 1px solid #ffffff;
-max-height: 120px;
-overflow-y: auto;
-background-color: #ffffff;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-z-index: 1000;
-cursor: pointer;
+  color: black;
+  font-size: 15px;
+  position: relative;
+  border: 1px solid #ffffff;
+  max-height: 120px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  cursor: pointer;
 }
 
 .suggestions:last-child {
-border-bottom: none; 
+  border-bottom: none;
 }
 
 .suggestions:hover {
-background-color: #000000;
-color: white;
+  background-color: #000000;
+  color: white;
 }
 
-
-
-.container span {
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  text-align: center;
-}
-
-
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -94,8 +80,7 @@ color: white;
   padding: 10px 0;
   text-align: center;
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-
+  justify-content: center;
 }
 
 .navbar a {
@@ -110,6 +95,7 @@ color: white;
   color: #000000;
 }
 
+/* Container */
 .container {
   max-width: 1600px;
   margin: 20px auto;
@@ -136,7 +122,6 @@ color: white;
   cursor: pointer;
   color: #000000;
   background-color: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .form-group label:hover {
@@ -145,7 +130,6 @@ color: white;
 }
 
 .form {
-
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -188,6 +172,7 @@ color: white;
   min-height: 40px;
 }
 
+/* Buttons */
 .button-container {
   text-align: center;
   margin-top: 20px;
@@ -205,14 +190,26 @@ button,
   cursor: pointer;
   transition: background-color 0.15s ease;
 }
-.gen-cv-btn{
-  margin-left: 44%;
+
+button:hover,
+.submit-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid black;
 }
 
-.down-cv-btn {
-  all: unset;
+button:active,
+.submit-btn:active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.gen-cv-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   padding: 12px 24px;
-  margin-left: 85%;
   border: 1px solid white;
   border-radius: 5px;
   background-color: #000000;
@@ -223,51 +220,28 @@ button,
   transition: background-color 0.15s ease;
 }
 
-button:hover,
-.submit-btn:hover {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-
-button:active,
-.submit-btn:active {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-
-/* Overall CV Container */
+/* Generated CV Styles */
 .generated-cv {
   width: 210mm;
   min-height: 290mm;
-  max-height: auto;
   padding: 20px;
   margin: 0 auto;
-  margin-top: 20px;
   background-color: #1a1a1a;
-  /* Black background */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #f1f1f1;
-  /* Light grey text */
 }
 
-/* Header Section */
 .generated-cv .cv-header {
   text-align: center;
   padding: 20px 0;
   border-bottom: 3px solid #02407e;
-  /* Navy blue accent border */
 }
 
 .generated-cv .cv-header h1 {
   font-size: 2.5rem;
   color: #ffffff;
-  /* White text for title */
   margin: 0;
   font-weight: 700;
 }
@@ -275,7 +249,6 @@ button:active,
 .generated-cv .cv-header h2 {
   font-size: 1.3rem;
   color: #b0b0b0;
-  /* Light grey text */
   margin-top: 5px;
   font-weight: 400;
 }
@@ -283,22 +256,18 @@ button:active,
 .generated-cv .cv-header p {
   font-size: 0.95rem;
   color: #b0b0b0;
-  /* Light grey for less emphasis */
   margin: 5px 0 0;
 }
 
-/* Layout for Main Content */
 .cv-content {
   display: flex;
   margin-top: 30px;
   gap: 25px;
 }
 
-/* Left Column - Contact Info & Skills */
 .cv-left {
   width: 30%;
   background-color: #212225;
-  /* Dark grey background */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -307,12 +276,9 @@ button:active,
 .cv-left .section-title {
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #ffffff;
-  /* White text for section titles */
   margin-bottom: 15px;
   border-bottom: 2px solid #0061c2;
-  /* Navy blue border */
   padding-bottom: 5px;
 }
 
@@ -320,7 +286,6 @@ button:active,
 .cv-left ul {
   font-size: 1rem;
   color: #dcdcdc;
-  /* Light grey text */
   line-height: 1.6;
 }
 
@@ -333,7 +298,6 @@ button:active,
   padding: 8px 0;
 }
 
-/* Right Column - Profile, Experience, Education */
 .cv-right {
   width: 70%;
 }
@@ -341,71 +305,37 @@ button:active,
 .cv-right .section-title {
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #ffffff;
-  /* White text for section titles */
   margin-bottom: 15px;
   border-bottom: 2px solid #0061c2;
-  /* Navy blue border */
   padding-bottom: 5px;
 }
 
-/* Profile Section */
-.cv-profile {
-  padding: 10px 0 20px;
-}
-
-.cv-profile p {
-  font-size: 1rem;
-  color: #dcdcdc;
-  /* Light grey text */
-  line-height: 1.6;
-}
-
-/* Experience Section */
-.cv-experience .experience-item {
+.cv-profile,
+.cv-experience .experience-item,
+.cv-education .education-item {
   margin-bottom: 25px;
 }
 
-.cv-experience .experience-item h4 {
+.cv-profile p,
+.cv-experience .experience-item p,
+.cv-education .education-item p {
+  font-size: 1rem;
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+.cv-experience .experience-item h4,
+.cv-education .education-item h4 {
   font-size: 1.1rem;
   font-weight: bold;
   color: #ffffff;
-  /* White text for job titles */
-  margin-bottom: 7px;
 }
 
 .cv-experience .experience-item h5 {
   font-size: 1rem;
   color: #a6a6a6;
-  /* Medium grey for subtext */
   margin-bottom: 12px;
-}
-
-.cv-experience .experience-item p {
-  font-size: 1rem;
-  color: #dcdcdc;
-  /* Light grey text */
-  line-height: 1.6;
-}
-
-/* Education Section */
-.cv-education .education-item {
-  margin-bottom: 20px;
-}
-
-.cv-education .education-item h4 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #ffffff;
-  /* White text for education titles */
-}
-
-.cv-education .education-item p {
-  font-size: 1rem;
-  color: #dcdcdc;
-  /* Light grey text */
-  margin: 5px 0;
 }
 
 /* Skills Section */
@@ -419,13 +349,26 @@ button:active,
   font-size: 1rem;
   color: #ffffff;
   background-color: #011426;
-  /* Navy blue for skill tags */
   padding: 6px 12px;
   border-radius: 5px;
   font-weight: 500;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .cv-content {
+    flex-direction: column;
+  }
 
+  .cv-left,
+  .cv-right {
+    width: 100%;
+  }
+
+  .navbar a {
+    padding: 10px 50px;
+  }
+}
 
 @media print {
   .a4-container {

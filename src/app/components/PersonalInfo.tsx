@@ -20,8 +20,7 @@ interface PersonalInfoProps {
 const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) => {
   return (
     <div id="personal-info" className="form-group">
-      <br></br>
-      <br></br>
+
       <h3>Personal Information</h3>
       
         <label htmlFor="fname">First Name *</label>

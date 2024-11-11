@@ -92,7 +92,7 @@ export default function Home() {
           handleSkillSelect={handleSkillSelect}
           handleSkillRemove={handleSkillRemove}
         />
-        <button type="submit">Generate CV</button>
+        <button type="submit">Generate Resume</button>
       </form>
     </div>
   );

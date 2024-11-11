@@ -25,7 +25,6 @@ const SkillsForm: React.FC<SkillsFormProps> = ({ skills, handleSkillSelect, hand
           <span key={index}>
             {skill}
             <button type="button" onClick={() => handleSkillRemove(skill)}>Remove</button>
-            
           </span>
         ))}
       </div>

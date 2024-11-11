@@ -74,26 +74,30 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Dynamic Resume Builder</h1>
-      <form onSubmit={handleSubmit}>
-        <PersonalInfo formData={formData} handleChange={handleChange} />
-        <EducationForm
-          education={formData.education}
-          handleEducationChange={handleEducationChange}
-          handleAddEducation={handleAddEducation}
-        />
-        <ExperienceForm
-          experience={formData.experience}
-          handleExperienceChange={handleExperienceChange}
-          handleAddExperience={handleAddExperience}
-        />
-        <SkillsForm
-          skills={formData.skills}
-          handleSkillSelect={handleSkillSelect}
-          handleSkillRemove={handleSkillRemove}
-        />
-        <button type="submit">Generate Resume</button>
-      </form>
+      <h1 className="title">Dynamic Resume Builder</h1>
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <PersonalInfo formData={formData} handleChange={handleChange} />
+          <EducationForm
+            education={formData.education}
+            handleEducationChange={handleEducationChange}
+            handleAddEducation={handleAddEducation}
+          />
+          <ExperienceForm
+            experience={formData.experience}
+            handleExperienceChange={handleExperienceChange}
+            handleAddExperience={handleAddExperience}
+          />
+          <SkillsForm
+            skills={formData.skills}
+            handleSkillSelect={handleSkillSelect}
+            handleSkillRemove={handleSkillRemove}
+          />
+          <button type="submit" className="gen-cv-btn">
+            Generate Resume
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

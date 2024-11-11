@@ -370,13 +370,15 @@ button:active,
   /* Navbar */
   .navbar {
     flex-direction: row;
-    height: auto;
-    padding: 10px;
+    height: 15px;
+    padding: 3px;
+    gap: 2px;
   }
 
   .navbar a {
-    padding: 10px 20px;
+    padding: 3px 6px;
   }
+
 
   /* Container */
   .container {

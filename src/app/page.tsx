@@ -93,8 +93,6 @@ export default function Home() {
           handleSkillRemove={handleSkillRemove}
         />
         <button type="submit">Generate Resume</button>
-
-        
       </form>
     </div>
   );

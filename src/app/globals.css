@@ -215,13 +215,13 @@ button:active,
 /* Generated CV Styles */
 .generated-cv {
   width: 210mm;
-  min-height: 290mm;
+  min-height: 295mm;
   max-height: auto;
   padding: 20px;
   margin: 0 auto;
   background-color: #1a1a1a;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 3px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #f1f1f1;
 }
@@ -321,7 +321,7 @@ button:active,
   font-size: 1rem;
   color: #dcdcdc;
   line-height: 1.6;
-  margin-top: -12px;
+
 }
 
 .cv-experience .experience-item h4,
@@ -335,7 +335,7 @@ button:active,
   font-size: 1rem;
   color: #a6a6a6;
   margin-bottom: 12px;
-  margin-top: -15px;
+
 }
 
 /* Skills Section */
@@ -456,7 +456,7 @@ button:active,
 }
 
 @media print {
-  .a4-container {
+  .generated-cv {
     page-break-after: always;
   }
 }

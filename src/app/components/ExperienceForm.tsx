@@ -22,7 +22,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
       {experience.map((exp, index) => (
         <div key={index} className="form-group">
         
-            htmlFor={`company-${index}`}
+      
             <input
               type="text"
               id={`company-${index}`}
@@ -32,7 +32,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               placeholder="Enter company name *"
               required
             />
-          htmlFor={`position-${index}`}
+    
             <input
               type="text"
               id={`position-${index}`}
@@ -43,7 +43,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               required
             />
           
-            htmlFor={`years-${index}`}
+      
             <input
               type="text"
               id={`years-${index}`}
@@ -53,7 +53,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               placeholder="Enter years/months of experience *"
               required
             />
-            htmlFor={`description-${index}`}
+  
             <textarea
               id={`description-${index}`}
               name="description"

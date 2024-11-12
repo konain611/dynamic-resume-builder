@@ -31,7 +31,6 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
               required
             />
 
-            htmlFor={`type-${index}`}
             <input
               type="text"
               id={`type-${index}`}
@@ -42,7 +41,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
               required
             />
      
-            htmlFor={`years-${index}`}
+         
             <input
               type="text"
               id={`years-${index}`}
@@ -52,7 +51,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
               placeholder="Years/Months of Program"
             />
         
-            htmlFor={`field-${index}`}
+        
             <input
               type="text"
               id={`field-${index}`}

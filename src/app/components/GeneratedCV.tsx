@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import html2pdf from "html2pdf.js";
+// import html2pdf from "html2pdf.js";
 
 interface GeneratedCVProps {
     formData: {
@@ -19,14 +19,14 @@ interface GeneratedCVProps {
 const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
     const cvRef = useRef<HTMLDivElement>(null);
 
-    const handleDownload = () => {
-        const element = cvRef.current;
-        if (element) {
-            html2pdf()
-                .from(element)
-                .save('generated_cv.pdf');
-        }
-    };
+    // const handleDownload = () => {
+    //     const element = cvRef.current;
+    //     if (element) {
+    //         html2pdf()
+    //             .from(element)
+    //             .save('generated_cv.pdf');
+    //     }
+    // };
 
     return (
         <div>
@@ -102,7 +102,7 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                     </div>
                 </div>
             </div>
-            <button onClick={handleDownload} className="download-cv-btn">Download CV as PDF</button>
+            {/* <button onClick={handleDownload} className="download-cv-btn">Download CV as PDF</button> */}
         </div>
     );
 };

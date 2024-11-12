@@ -212,28 +212,11 @@ button:active,
   background-color: #000000;
   color: #ffffff;
 }
-
-.gen-cv-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 12px 24px;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-  width: 100%;
-}
-
 /* Generated CV Styles */
 .generated-cv {
   width: 210mm;
   min-height: 290mm;
+  max-height: auto;
   padding: 20px;
   margin: 0 auto;
   background-color: #1a1a1a;
@@ -269,13 +252,16 @@ button:active,
   margin: 5px 0 0;
 }
 
+/* Update cv-content for side-by-side layout */
 .cv-content {
   display: flex;
   margin-top: 30px;
   gap: 25px;
-  flex-direction: column;
+  /* Set to row for side-by-side layout */
+  flex-direction: row;
 }
 
+/* Skills section on the left */
 .cv-left {
   width: 30%;
   background-color: #212225;
@@ -309,6 +295,7 @@ button:active,
   padding: 8px 0;
 }
 
+/* Content sections (about, education, experience) on the right */
 .cv-right {
   width: 70%;
 }
@@ -334,6 +321,7 @@ button:active,
   font-size: 1rem;
   color: #dcdcdc;
   line-height: 1.6;
+  margin-top: -12px;
 }
 
 .cv-experience .experience-item h4,
@@ -347,6 +335,7 @@ button:active,
   font-size: 1rem;
   color: #a6a6a6;
   margin-bottom: 12px;
+  margin-top: -15px;
 }
 
 /* Skills Section */
@@ -364,6 +353,7 @@ button:active,
   border-radius: 5px;
   font-weight: 500;
 }
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -420,7 +410,9 @@ button:active,
   .cv-content {
     flex-direction: column;
   }
-
+  .cv-content p{
+    margin-bottom: -3rem;
+  }
   .cv-left,
   .cv-right {
     width: 100%;

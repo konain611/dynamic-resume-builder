@@ -1,10 +1,13 @@
-"use client";
+"use client"
 
 import { useState, ChangeEvent, FormEvent } from "react";
 import PersonalInfo from "./components/PersonalInfo";
 import EducationForm from "./components/EducationForm";
 import ExperienceForm from "./components/ExperienceForm";
 import SkillsForm from "./components/SkillsForm";
+import GeneratedCV from "./components/GeneratedCV";
+
+
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -18,7 +21,11 @@ export default function Home() {
     education: [{ institution: "", type: "", years: "", field: "" }],
     experience: [{ company: "", position: "", years: "", description: "" }],
     skills: [] as string[],
+    languages: [] as string[], 
+
   });
+
+  const [isCVGenerated, setIsCVGenerated] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -67,9 +74,11 @@ export default function Home() {
     }));
   };
 
+
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log(formData); // Log the data to the console or handle the resume generation here.
+    setIsCVGenerated(true);
   };
 
   return (
@@ -93,11 +102,14 @@ export default function Home() {
             handleSkillSelect={handleSkillSelect}
             handleSkillRemove={handleSkillRemove}
           />
+
           <button type="submit" className="gen-cv-btn">
             Generate Resume
           </button>
         </form>
       </div>
+
+      {isCVGenerated && <GeneratedCV formData={formData} />}
     </div>
   );
 }

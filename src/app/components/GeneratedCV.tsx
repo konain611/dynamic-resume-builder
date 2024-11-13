@@ -26,7 +26,7 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                 Generated resume
             </h1>
             <div className="generated-cv" ref={cvRef}>
-                {/* Header Section */}
+              
                 <div className="cv-header">
                     <h1>
                         {formData.fname} {formData.lname}
@@ -36,11 +36,11 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                     </p>
                 </div>
 
-                {/* Main Content Section */}
+              
                 <div className="cv-content">
-                    {/* Left Column */}
+                 
                     <div className="cv-left">
-                        {/* Skills Section */}
+                       
                         <div className="cv-skills">
                             <h3 className="section-title">Skills</h3>
                             <ul>
@@ -51,15 +51,15 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                         </div>
                     </div>
 
-                    {/* Right Column */}
+         
                     <div className="cv-right">
-                        {/* Profile Section */}
+                      
                         <div className="cv-profile">
                             <h3 className="section-title">About</h3>
                             <p>{formData.about}</p>
                         </div>
 
-                        {/* Education Section */}
+              
                         <div className="cv-education">
                             <h3 className="section-title">Education</h3>
                             {formData.education.map((edu, index) => (
@@ -78,7 +78,7 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                             ))}
                         </div>
 
-                        {/* Experience Section */}
+                  
                         <div className="cv-experience">
                             <h3 className="section-title">Experience</h3>
                             {formData.experience.map((exp, index) => (
@@ -94,7 +94,7 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                     </div>
                 </div>
             </div>
-            {/* <button onClick={handleDownload} className="download-cv-btn">Download CV as PDF</button> */}
+       
         </div>
     );
 };

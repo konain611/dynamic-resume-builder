@@ -15,9 +15,16 @@ html {
 h3 {
   color: #000000;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
-hr {
-  color: #000000;
+span{
+  color: red;
+  text-align: center;
+  /* display: block;  */
+  margin: 0 auto;
 }
 
 /* Skill Tags */
@@ -212,6 +219,21 @@ button:active,
   background-color: #000000;
   color: #ffffff;
 }
+.gen-cv-btn {
+  display: block; 
+  margin: 0 auto; 
+  padding: 12px 24px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+
 /* Generated CV Styles */
 .generated-cv {
   width: 210mm;
@@ -326,7 +348,7 @@ button:active,
 
 .cv-experience .experience-item h4,
 .cv-education .education-item h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
 }
@@ -357,6 +379,7 @@ button:active,
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+
   /* Navbar */
   .navbar {
     flex-direction: row;
@@ -377,7 +400,7 @@ button:active,
     margin: 3px;
     font-size: 0.7rem;
   }
-  
+
   .selectedSkills {
     display: flex;
     flex-wrap: wrap;
@@ -410,9 +433,11 @@ button:active,
   .cv-content {
     flex-direction: column;
   }
-  .cv-content p{
+
+  .cv-content p {
     margin-bottom: -3rem;
   }
+
   .cv-left,
   .cv-right {
     width: 100%;
@@ -427,6 +452,7 @@ button:active,
     width: 60%;
     padding: 12px 24px;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -439,34 +465,52 @@ button:active,
     font-size: 0.8rem;
     padding: 8px;
   }
-  .generated-cv{
+
+  .generated-cv {
     width: 20rem;
     min-height: 35rem;
   }
-  .generated-cv .cv-header h1{
+
+  .generated-cv .cv-header h1 {
     font-size: 1.6rem;
   }
+
   .generated-cv .cv-header p {
     font-size: 0.5rem;
 
   }
+
   .cv-content {
     margin-top: 1.5rem;
     gap: 0.6rem;
     flex-direction: row;
   }
-  .cv-profile p,
-.cv-experience .experience-item p,
-.cv-education .education-item p {
-  font-size: 0.5rem;
-  color: #dcdcdc;
-  line-height: 1;
 
-}
+  .cv-profile p,
+  .cv-experience .experience-item p,
+  .cv-education .education-item p {
+    font-size: 0.5rem;
+    color: #dcdcdc;
+    line-height: 1.2;
+    margin-bottom: auto;
+  }
+
+  .cv-experience .experience-item h4,
+  .cv-education .education-item h4 {
+    font-size: 0.75rem;
+  }
+
+  .cv-experience .experience-item h5 {
+    font-size: 0.65rem;
+    color: #a6a6a6;
+    margin-bottom: 8px;
+  
+  }
   .cv-left,
   .cv-right {
     padding: 10px;
   }
+
   .cv-content {
     margin-top: 1.5rem;
     gap: 0.6rem;
@@ -477,12 +521,13 @@ button:active,
   .cv-right .section-title {
     font-size: 1rem;
   }
+
   .cv-skills ul li {
     font-size: 0.5rem;
     padding: 3px 6px;
   }
 
-  
+
 }
 
 @media print {

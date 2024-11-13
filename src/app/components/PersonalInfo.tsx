@@ -25,6 +25,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ formData, handleChange }) =
       
         <label htmlFor="fname">First Name *</label>
         <input
+        
           type="text"
           id="fname"
           name="fname"

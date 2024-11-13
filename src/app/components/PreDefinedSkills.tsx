@@ -37,7 +37,7 @@ const predefinedSkills = [
     "Negotiation", "Customer Service"
   ];
 
-// Define the types for the props
+
 interface SkillsInputProps {
     selectedSkills: string[];
     onSkillSelect: (skill: string) => void;

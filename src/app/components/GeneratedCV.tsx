@@ -1,4 +1,5 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
+import html2pdf from "html2pdf.js"; // Import the library
 
 
 interface GeneratedCVProps {
@@ -19,6 +20,19 @@ interface GeneratedCVProps {
 const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
     const cvRef = useRef<HTMLDivElement>(null);
 
+    const handleDownload = () => {
+        const element = cvRef.current;
+        if (element) {
+            const opt = {
+                margin: 1,
+                filename: 'resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().from(element).set(opt).save();
+        }
+    };
 
     return (
         <div>
@@ -26,7 +40,6 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                 Generated resume
             </h1>
             <div className="generated-cv" ref={cvRef}>
-              
                 <div className="cv-header">
                     <h1>
                         {formData.fname} {formData.lname}
@@ -36,11 +49,8 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                     </p>
                 </div>
 
-              
                 <div className="cv-content">
-                 
                     <div className="cv-left">
-                       
                         <div className="cv-skills">
                             <h3 className="section-title">Skills</h3>
                             <ul>
@@ -51,15 +61,12 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                         </div>
                     </div>
 
-         
                     <div className="cv-right">
-                      
                         <div className="cv-profile">
                             <h3 className="section-title">About</h3>
                             <p>{formData.about}</p>
                         </div>
 
-              
                         <div className="cv-education">
                             <h3 className="section-title">Education</h3>
                             {formData.education.map((edu, index) => (
@@ -78,7 +85,6 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                             ))}
                         </div>
 
-                  
                         <div className="cv-experience">
                             <h3 className="section-title">Experience</h3>
                             {formData.experience.map((exp, index) => (
@@ -94,7 +100,9 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                     </div>
                 </div>
             </div>
-       
+            <button onClick={handleDownload} className="download-btn">
+                Download Resume
+            </button>
         </div>
     );
 };

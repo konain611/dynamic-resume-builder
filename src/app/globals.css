@@ -531,7 +531,25 @@ button:active,
 }
 
 @media print {
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
   .generated-cv {
     page-break-after: always;
+      margin: 0;
+      padding: 20px;
+      width: 100%;
+      box-shadow: none;
+  }
+
+  h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+  }
+
+  .download-btn {
+      display: none; /* Hide download button in PDF */
   }
 }

@@ -30,7 +30,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               value={exp.company}
               onChange={(e) => handleExperienceChange(index, e)}
               placeholder="Enter company name *"
-              required
+              // required
             />
     
             <input
@@ -40,7 +40,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               value={exp.position}
               onChange={(e) => handleExperienceChange(index, e)}
               placeholder="Enter your position *"
-              required
+              // required
             />
           
       
@@ -51,7 +51,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
               value={exp.years}
               onChange={(e) => handleExperienceChange(index, e)}
               placeholder="Enter years/months of experience *"
-              required
+              // required
             />
   
             <textarea

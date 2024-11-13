@@ -1,10 +1,4 @@
-
-import React, { useRef } from "react";
-
-
-import html2pdf from 'html2pdf.js';
-
-// Rest of your GeneratedCV component...
+import React, { useRef, useEffect, useState } from "react";
 
 interface GeneratedCVProps {
     formData: {
@@ -21,25 +15,41 @@ interface GeneratedCVProps {
     };
 }
 
+
+
+
 const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
     const cvRef = useRef<HTMLDivElement>(null);
+    const [html2pdf, setHtml2pdf] = useState<any>(null);
+
+    useEffect(() => {
+        import("html2pdf.js").then((module) => {
+            setHtml2pdf(() => module.default);
+        });
+    }, []);
 
     const handleDownload = () => {
-        if (typeof window !== 'undefined') {
-            const element = cvRef.current;
-            if (element) {
-                const opt = {
-                    margin: 1,
-                    filename: 'resume.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2 },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } 
-                };
-                html2pdf().from(element).set(opt).save();
+        console.log("Download button clicked");
+        const element = cvRef.current;
+        console.log("cvRef current:", element);
+        
+        if (element && html2pdf) {
+            const opt = {
+                margin: 1,
+                filename: 'resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } 
+            };
+            if (typeof html2pdf !== 'function') {
+                console.error("html2pdf is not a function");
+                return;
             }
+            html2pdf().from(element).set(opt).save();
+        } else {
+            console.log("Element or html2pdf not available");
         }
     };
-
     return (
         <div>
             <h1 id="resume" className="title">

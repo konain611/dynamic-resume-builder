@@ -28,7 +28,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
               value={edu.institution}
               onChange={(e) => handleEducationChange(index, e)}
               placeholder="Institution Name *"
-              required
+              // required
             />
 
             <input
@@ -38,7 +38,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
               value={edu.type}
               onChange={(e) => handleEducationChange(index, e)}
               placeholder="Type of Education (Bachelor/Masters/Course etc) *"
-              required
+              // required
             />
      
          
@@ -59,7 +59,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
               value={edu.field}
               onChange={(e) => handleEducationChange(index, e)}
               placeholder="Field (Computer Science/Business Analytics/Cyber Security etc) *"
-              required
+              // required
             />
         
         </div>

@@ -1,6 +1,10 @@
-import React, { useRef } from "react";
-import html2pdf from "html2pdf.js"; // Import the library
 
+import React, { useRef } from "react";
+
+
+import html2pdf from 'html2pdf.js';
+
+// Rest of your GeneratedCV component...
 
 interface GeneratedCVProps {
     formData: {
@@ -21,16 +25,18 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
     const cvRef = useRef<HTMLDivElement>(null);
 
     const handleDownload = () => {
-        const element = cvRef.current;
-        if (element) {
-            const opt = {
-                margin: 1,
-                filename: 'resume.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } 
-            };
-            html2pdf().from(element).set(opt).save();
+        if (typeof window !== 'undefined') {
+            const element = cvRef.current;
+            if (element) {
+                const opt = {
+                    margin: 1,
+                    filename: 'resume.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } 
+                };
+                html2pdf().from(element).set(opt).save();
+            }
         }
     };
 

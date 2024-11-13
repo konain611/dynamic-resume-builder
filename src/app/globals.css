@@ -390,8 +390,10 @@ button:active,
 /* FOR MOBILE PHONE */
 @media (max-width: 480px) {
   .navbar {
-    gap: 1px;
+    margin-top: 0.1rem;
+    gap: 0px;
     padding: 3px 0;
+    height: 2rem;
   }
 
   .navbar a {

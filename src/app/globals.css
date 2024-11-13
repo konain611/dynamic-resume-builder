@@ -236,17 +236,21 @@ button:active,
 
 /* Generated CV Styles */
 .generated-cv {
-  width: 210mm;
+  max-width: 210mm;
   min-height: 295mm;
   max-height: auto;
-  padding: 20px;
+  padding: 10mm;
   margin: 0 auto;
   background-color: #1a1a1a;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #f1f1f1;
+  box-sizing: border-box; /* Include padding in width calculations */
+  font-family: Arial, sans-serif; /* Use a clean font */
+  font-size: 12pt; /* Standard font size */
+  line-height: 1.5; /* Better readability */
 }
+
 
 .generated-cv .cv-header {
   text-align: center;
@@ -360,7 +364,6 @@ button:active,
 
 }
 
-/* Skills Section */
 .cv-skills ul {
   display: flex;
   flex-wrap: wrap;
@@ -376,85 +379,7 @@ button:active,
   font-weight: 500;
 }
 
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-
-  /* Navbar */
-  .navbar {
-    flex-direction: row;
-    height: 25px;
-    padding: 4px;
-    gap: 8px;
-    font-size: 0.7rem;
-  }
-
-  .navbar a {
-    padding: 2px 2px;
-  }
-
-  .skillTag {
-
-    padding: 2px 3px;
-    border-radius: 5px;
-    margin: 3px;
-    font-size: 0.7rem;
-  }
-
-  .selectedSkills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-  }
-
-  /* Container */
-  .container {
-    max-width: 90%;
-    padding: 10px;
-  }
-
-  .title {
-    font-size: 1.5rem;
-    margin-top: 50px;
-  }
-
-  .form-group {
-    font-size: 1.2rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-
-  /* CV content */
-  .cv-content {
-    flex-direction: column;
-  }
-
-  .cv-content p {
-    margin-bottom: -3rem;
-  }
-
-  .cv-left,
-  .cv-right {
-    width: 100%;
-  }
-
-  /* Buttons */
-  .button-container {
-    margin-top: 10px;
-  }
-
-  .gen-cv-btn {
-    width: 60%;
-    padding: 12px 24px;
-  }
-  
-}
-
+/* FOR MOBILE PHONE */
 @media (max-width: 480px) {
   .form-group label {
     font-size: 1.2rem;
@@ -532,24 +457,12 @@ button:active,
 
 @media print {
   body {
-      margin: 0;
-      padding: 0;
+      margin: 0; /* Remove default body margin */
   }
-
   .generated-cv {
-    page-break-after: always;
-      margin: 0;
-      padding: 20px;
-      width: 100%;
-      box-shadow: none;
+      page-break-after: always; /* Force page breaks after the CV */
   }
-
-  h1, h2, h3, p {
-      margin: 0;
-      padding: 0;
-  }
-
-  .download-btn {
-      display: none; /* Hide download button in PDF */
+  .cv-header, .cv-content {
+      page-break-inside: avoid; /* Prevent breaking inside these sections */
   }
 }

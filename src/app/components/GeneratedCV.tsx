@@ -39,6 +39,9 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
             <h1 id="resume" className="title">
                 Generated resume
             </h1>
+            <button onClick={handleDownload} className="download-btn">
+                Download Resume
+            </button>
             <div className="generated-cv" ref={cvRef}>
                 <div className="cv-header">
                     <h1>
@@ -100,9 +103,7 @@ const GeneratedCV: React.FC<GeneratedCVProps> = ({ formData }) => {
                     </div>
                 </div>
             </div>
-            <button onClick={handleDownload} className="download-btn">
-                Download Resume
-            </button>
+            
         </div>
     );
 };

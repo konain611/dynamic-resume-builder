@@ -15,12 +15,13 @@ html {
 h3 {
   color: #000000;
 }
-a{
+
+a {
   text-decoration: none;
   color: inherit;
 }
 
-span{
+span {
   color: red;
   text-align: center;
   /* display: block;  */
@@ -219,9 +220,15 @@ button:active,
   background-color: #000000;
   color: #ffffff;
 }
+
+.download-btn {
+  justify-content: flex-end;
+}
+
+
 .gen-cv-btn {
-  display: block; 
-  margin: 0 auto; 
+  display: block;
+  margin: 0 auto;
   padding: 12px 24px;
   border: 1px solid white;
   border-radius: 5px;
@@ -239,16 +246,17 @@ button:active,
   max-width: 210mm;
   min-height: 295mm;
   max-height: auto;
-  padding: 10mm;
+  padding: 6mm;
   margin: 0 auto;
   background-color: #1a1a1a;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   color: #f1f1f1;
-  box-sizing: border-box; /* Include padding in width calculations */
-  font-family: Arial, sans-serif; /* Use a clean font */
-  font-size: 12pt; /* Standard font size */
-  line-height: 1.5; /* Better readability */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  z-index: 1000;
 }
 
 
@@ -381,6 +389,24 @@ button:active,
 
 /* FOR MOBILE PHONE */
 @media (max-width: 480px) {
+  .navbar {
+    gap: 1px;
+    padding: 5px 0;
+  }
+
+  .navbar a {
+    font-size: 0.6rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
   .form-group label {
     font-size: 1.2rem;
   }
@@ -429,8 +455,9 @@ button:active,
     font-size: 0.65rem;
     color: #a6a6a6;
     margin-bottom: 8px;
-  
+
   }
+
   .cv-left,
   .cv-right {
     padding: 10px;
@@ -452,17 +479,28 @@ button:active,
     padding: 3px 6px;
   }
 
+  .skillTag {
+    font-size: 0.8rem;
+  }
+
+  .download-btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
 
 }
 
 @media print {
   body {
-      margin: 0; /* Remove default body margin */
+    margin: 0;
   }
+
   .generated-cv {
-      page-break-after: always; /* Force page breaks after the CV */
+    page-break-after: always;
   }
-  .cv-header, .cv-content {
-      page-break-inside: avoid; /* Prevent breaking inside these sections */
+
+  .cv-header,
+  .cv-content {
+    page-break-inside: avoid;
   }
 }

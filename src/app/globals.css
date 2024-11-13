@@ -391,11 +391,11 @@ button:active,
 @media (max-width: 480px) {
   .navbar {
     gap: 1px;
-    padding: 5px 0;
+    padding: 3px 0;
   }
 
   .navbar a {
-    font-size: 0.6rem;
+    font-size: 0.4rem;
   }
 
   .title {

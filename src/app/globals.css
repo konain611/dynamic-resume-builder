@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #0d1117;
@@ -28,7 +27,7 @@ span {
   margin: 0 auto;
 }
 
-/* Skill Tags */
+
 .skillTag {
   background-color: #000000;
   color: #fff;

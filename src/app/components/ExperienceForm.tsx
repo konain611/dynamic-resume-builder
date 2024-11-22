@@ -64,7 +64,7 @@ const ExperienceForm: React.FC<ExperienceFormProps> = ({ experience, handleExper
         </div>
       ))}
       <button type="button" onClick={handleAddExperience} className="add-experience-btn">
-        Add Experience
+        Add More Experiences (+)
       </button>
     </div>
   );

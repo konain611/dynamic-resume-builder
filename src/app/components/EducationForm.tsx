@@ -65,7 +65,7 @@ const EducationForm: React.FC<EducationFormProps> = ({ education, handleEducatio
         </div>
       ))}
       <button type="button" onClick={handleAddEducation}>
-        Add Education
+        Add More Education (+)
       </button>
     </div>
   );

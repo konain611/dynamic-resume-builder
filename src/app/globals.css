@@ -24,7 +24,6 @@ a {
 span {
   color: red;
   text-align: center;
-  /* display: block;  */
   margin: 0 auto;
 }
 
@@ -112,7 +111,7 @@ span {
 
 /* Container */
 .container {
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 20px auto;
   padding: 20px;
   color: #161b22;
@@ -291,7 +290,6 @@ button:active,
   display: flex;
   margin-top: 30px;
   gap: 25px;
-  /* Set to row for side-by-side layout */
   flex-direction: row;
 }
 

@@ -8,7 +8,7 @@ interface FormData {
   phone: string;
   city: string;
   country: string;
-  about?: string; // Optional field
+  about?: string; 
 }
 
 

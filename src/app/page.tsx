@@ -77,12 +77,12 @@ export default function Home() {
 
 
   const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setIsCVGenerated(true);
     const resumeSection = document.getElementById('resume');
     if (resumeSection) {
-        resumeSection.scrollIntoView({ behavior: 'smooth' });
+      resumeSection.scrollIntoView({ behavior: 'smooth' });
     }
+    e.preventDefault();
+    setIsCVGenerated(true);
   };
 
   return (

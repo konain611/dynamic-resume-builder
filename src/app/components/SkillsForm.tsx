@@ -7,11 +7,11 @@ interface FormData {
 }
 
 
-interface SkillsFormProps {
-    formData?: FormData; 
-    handleSkillSelect: (skill: string) => void;
-    handleSkillRemove: (skill: string) => void;
-}
+// interface SkillsFormProps {
+//     formData?: FormData; 
+//     handleSkillSelect: (skill: string) => void;
+//     handleSkillRemove: (skill: string) => void;
+// }
 
 export default function SkillsForm({
     formData = { skills: [] },  

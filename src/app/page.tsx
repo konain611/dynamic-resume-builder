@@ -21,7 +21,7 @@ export default function Home() {
     education: [{ institution: "", type: "", years: "", field: "" }],
     experience: [{ company: "", position: "", years: "", description: "" }],
     skills: [] as string[],
-    languages: [] as string[], 
+    languages: [] as string[],
 
   });
 
@@ -90,7 +90,7 @@ export default function Home() {
       <h1 className="title">Dynamic Resume Builder</h1>
       <div className="container">
         <form onSubmit={handleSubmit}>
-      <span>Fields with * are Required</span>
+          <span>Fields with * are Required</span>
           <PersonalInfo formData={formData} handleChange={handleChange} />
           <EducationForm
             education={formData.education}
@@ -107,11 +107,11 @@ export default function Home() {
             handleSkillSelect={handleSkillSelect}
             handleSkillRemove={handleSkillRemove}
           />
-          
-          <button type="submit"  className="gen-cv-btn">
+
+          <button type="submit" className="gen-cv-btn">
             Generate Resume
           </button>
-         
+
         </form>
       </div>
 
